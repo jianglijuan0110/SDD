@@ -1,4 +1,4 @@
-package seance1_interfaces;
+package seance1_partie3_interfaces_rectangle;
 
 import java.util.Scanner;
 
@@ -12,30 +12,28 @@ import java.util.Scanner;
 
 public class Point2d {
 	
-	// les attributs
-	private int x;
-	private int y;
+	// attributs
+	private int x, y;
 	
-	// les constructeurs
-	
-	public Point2d(int x, int y) {
-		
-		this.x = x;
-		this.y = y;
-	}
+	// constructeurs
 	
 	public Point2d() {
-		
 	}
 
-	// des accesseurs qui vérifient les valeurs
+	public Point2d(int x, int y) {
+		this.setX(x);
+		this.setY(y);
+	}
+	
+	// accesseurs qui vérifient les valeurs	
+
 	public int getX() {
 		return x;
 	}
 
 	public void setX(int x) {
-		if(x>=0)
-			this.x = x;
+		if (x>0) this.x = x; 
+		// sinon x non modifié
 	}
 
 	public int getY() {
@@ -43,15 +41,22 @@ public class Point2d {
 	}
 
 	public void setY(int y) {
-		if(y >= 0)
-			this.y = y;
+		if (y>0) this.y = y;
+		// sinon y non modifié
 	}
-	
+
+	//méthodes
+		
 	public void saisie(Scanner clavier) {
-		System.out.println("saisie l'abscisse x :");
+		System.out.println("Entrer l'abscisse (x)");
 		this.setX(clavier.nextInt());
-		System.out.println("saisie l'ordonnée y :");
+		System.out.println("Entrer l'ordonnée (y)");
 		this.setY(clavier.nextInt());
+	}
+
+	@Override
+	public String toString() {
+		return "Point2d [x=" + x + ", y=" + y + "]";
 	}
 
 }

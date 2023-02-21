@@ -1,4 +1,4 @@
-package seance1_interfaces_solution;
+package seance1_partie2_interfaces_solution;
 
 import java.util.Scanner;
 

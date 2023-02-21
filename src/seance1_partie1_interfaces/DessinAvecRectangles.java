@@ -1,4 +1,4 @@
-package seance1_interfaces;
+package seance1_partie1_interfaces;
 
 import java.util.ArrayList;
 
