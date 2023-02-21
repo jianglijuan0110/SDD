@@ -13,16 +13,21 @@ public class Pile<T> implements IPile<T> {
 	}
 	
 	public T depiler() throws PileVideException{
+		int tailleAvant = this.taille();
 		if (this.estVide())
 			throw new PileVideException("en d ́epilant");
 		T sommet = elements.get(elements.size()-1);
 		elements.remove(sommet);
+		assert tailleAvant - this.taille() == 1 : "la taille a diminué de plus de 1";
 		return sommet;
 	}
+	
 	public void empiler(T t) throws PileVideException {
+		int tailleAvant = this.taille();
 		elements.add(t);
 		//elements.add(null);
 		assert this.sommet()==t : "dernier empile ="+this.sommet();
+		assert this.taille() - tailleAvant   == 1 : "la taille a augmenté de plus de 1";
 	}
 	
 	public boolean estVide() {
