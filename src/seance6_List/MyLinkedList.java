@@ -25,14 +25,18 @@ public class MyLinkedList <E>
 	// une liste vide est telle que first == null && last == null
 	@Override   
 	public boolean isEmpty() {
-		// TODO
-		return true;
+		/*if(size == 0)
+			return true;
+		else
+			return false;*/
+		
+		return size == 0;
 	}
 	
 	// ajout à la fin de la chaîne
 	@Override 
 	public boolean add(E element) {
-		// TODO
+		
 		return true;
 	}
 	
