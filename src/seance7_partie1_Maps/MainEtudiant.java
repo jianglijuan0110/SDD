@@ -35,7 +35,7 @@ public class MainEtudiant {
 		
 		// ici il faudra remplacer Promotion par PromotionMap
 		
-		Promotion p = new Promotion("groupe B FDS",2021);
+		PromotionMap p = new PromotionMap("groupe B FDS",2021);
 		
 		System.out.println("\n---PROMO VIDE----\n"+p.moyenneGénérale());
 		System.out.println("\n---PROMO VIDE----\n"+p.recherche("Astrid"));
